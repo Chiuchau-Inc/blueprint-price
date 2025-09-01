@@ -1,7 +1,7 @@
 // API Configuration
 const API_CONFIG = {
   development: {
-    baseURL: 'http://127.0.0.1:8081'
+    baseURL: process.env.REACT_APP_API_BASE_URL || 'http://127.0.0.1:8081'
   },
   production: {
     baseURL: process.env.REACT_APP_API_BASE_URL || 'https://your-zeabur-api-domain.zeabur.app'

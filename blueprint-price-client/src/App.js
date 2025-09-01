@@ -4,6 +4,7 @@ import './App.css';
 import Scan from './components/Scan';
 import ResultsTable from './components/ResultsTable';
 import SmartDimensionInput from './components/SmartDimensionInput';
+import IPCheck from './components/IPCheck';
 import { API_BASE_URL, API_ENDPOINTS } from './config/api';
 
 function App() {
@@ -268,7 +269,7 @@ function App() {
   };
 
   return (
-    <>
+    <IPCheck>
       <header className="header py-3 bg-white border-bottom">
         <div className="container-fluid d-flex justify-content-center">
           <div className="d-flex align-items-center">
@@ -418,7 +419,7 @@ function App() {
           </span>
         </div>
       </footer>
-    </>
+    </IPCheck>
   );
 }
 
