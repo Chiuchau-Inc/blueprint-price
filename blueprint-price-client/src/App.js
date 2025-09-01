@@ -273,7 +273,7 @@ function App() {
       <header className="header py-3 bg-white border-bottom">
         <div className="container-fluid d-flex justify-content-center">
           <div className="d-flex align-items-center">
-            <img src="logo.png" alt="久朝機殼" className="me-3" />
+            <img src="/logo.svg" alt="久朝機殼" className="me-3" style={{maxHeight: '50px'}} />
             <h1 className="h3 mb-0">久朝機殼圖面生產價格預測系統</h1>
           </div>
         </div>
