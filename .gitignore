@@ -95,10 +95,10 @@ logs
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# Model files (large binaries)
-*.pkl
-*.joblib
-*.model
+# Model files (large binaries) - commented out to include model files
+# *.pkl
+# *.joblib
+# *.model
 
 # Temporary files
 *.tmp
