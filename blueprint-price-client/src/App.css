@@ -1,0 +1,241 @@
+/* 移除 container 的最大寬度限制 */
+.header .container-fluid {
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 0;
+  padding-top: 0;
+}
+
+.header .container-fluid img {
+  height: 100px;
+}
+
+/* 美化表單樣式 */
+.form-control, .form-select {
+  border-radius: 0.375rem;
+}
+
+/* 美化按鈕樣式 */
+.btn-primary {
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+}
+
+/* 固定右側預測區域 */
+.col-3 > div {
+  position: sticky;
+  top: 20px;
+}
+
+/* Footer 樣式 */
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  z-index: 1000;
+  margin-top: 2rem;
+}
+
+/* Footer 文字樣式 */
+.footer .text-muted {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+/* Header 樣式 */
+.header {
+  position: relative;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+  color: #333;
+  font-weight: 500;
+}
+
+/* Slider 樣式 */
+.input-group {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;        /* 確保 input-group 佔滿容器寬度 */
+}
+
+/* Slider 容器樣式 - 放在左邊 */
+.input-group .form-range {
+  flex: 1;            /* 佔據所有剩餘空間 */
+  min-width: 0;       /* 避免溢出 */
+  padding: 0;
+  order: 1;
+}
+
+/* 數字輸入框樣式 - 放在右邊 */
+.input-group input[type="number"] {
+  width: 300px;       /* 固定寬度 */
+  min-width: 300px;   /* 確保最小寬度 */
+  max-width: 300px;   /* 確保最大寬度 */
+  text-align: right;
+  flex: 0 0 300px;    /* 不伸縮，保持固定寬度 */
+  order: 2;
+}
+
+/* 美化 slider 外觀 */
+.form-range::-webkit-slider-thumb {
+  background: #0d6efd;
+}
+
+.form-range::-moz-range-thumb {
+  background: #0d6efd;
+}
+
+/* 掃描元件樣式 */
+.scan-container {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.scan-container .input-group {
+  max-width: 100%;
+}
+
+.preview-container {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #dee2e6;
+  margin-top: 1rem;
+}
+
+.preview-item {
+  transition: all 0.2s ease-in-out;
+}
+
+.preview-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn-close {
+  opacity: 0;
+  transition: opacity 0.2s;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.preview-item:hover .btn-close {
+  opacity: 1;
+}
+
+.react-pdf__Document {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.react-pdf__Page {
+  max-width: 100%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  margin: 8px;
+}
+
+.react-pdf__Page canvas {
+  max-width: 100%;
+  height: auto !important;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  padding-bottom: 0;
+}
+
+/* 確保主要內容區域有足夠的空間 */
+.py-4.container-fluid:not(.header .container-fluid) {
+  min-height: 70vh; /* 簡化高度設定 */
+}
+
+/* 表單區域底部間距 */
+form .row {
+  margin-bottom: 2rem;
+}
+
+/* Results Table 樣式 */
+.results-table-container {
+  background-color: transparent;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.results-table-container .table {
+  margin-bottom: 0;
+  font-size: 0.75rem;
+}
+
+.results-table-container .table th {
+  background-color: #343a40;
+  color: white;
+  border-color: #454d55;
+  font-weight: 500;
+  white-space: nowrap;
+  vertical-align: middle;
+  padding: 0.5rem 0.25rem;
+  font-size: 0.7rem;
+}
+
+.results-table-container .table td {
+  padding: 0.4rem 0.25rem;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-size: 0.7rem;
+  height: 35px; /* 統一行高 */
+}
+
+.results-table-container .table-striped > tbody > tr:nth-of-type(odd) > td {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.results-table-container .table-hover > tbody > tr:hover > td {
+  background-color: rgba(0, 123, 255, 0.05);
+}
+
+.results-table-container .table-responsive {
+  border-radius: 0.375rem;
+  overflow-x: auto;
+  height: 240px; /* 調整為較小高度，剛好容納5筆資料 */
+  overflow-y: auto;
+  border: 1px solid #dee2e6;
+  background-color: #f8f9fa; /* 淡灰色背景顯示預留空間 */
+}
+
+.results-table-container .btn-sm {
+  padding: 0.125rem 0.25rem;
+  font-size: 0.65rem;
+}
+
+.table-note {
+  border-top: 1px solid #dee2e6;
+  padding-top: 0.5rem;
+}
+
+.table-note span {
+  font-size: 0.9rem !important;
+}
+
+/* 表格預留空間樣式 */
+.table-placeholder td {
+  height: 35px; /* 減少每行高度 */
+  border-bottom: 1px solid #dee2e6;
+  background-color: #ffffff !important;
+}
+
+.table-placeholder:hover td {
+  background-color: #ffffff !important;
+}

@@ -1,0 +1,22 @@
+# 基礎科學計算
+numpy==1.23.5
+scipy==1.9.3
+pandas==1.5.3
+scikit-learn==1.2.2
+matplotlib==3.7.1
+kiwisolver==1.4.7  # 指定兼容的版本
+
+# Web 框架
+flask==2.2.3
+flask-cors==3.0.10
+gunicorn==21.2.0
+
+# 機器學習
+category-encoders==2.4.0
+click
+
+# 添加 Google Cloud Storage 客戶端庫
+google-cloud-storage
+
+# 添加 pycaret
+pycaret==2.3.10

@@ -1,0 +1,22 @@
+{
+  "name": "blueprint-price-api",
+  "services": [
+    {
+      "name": "api",
+      "source": {
+        "type": "git"
+      },
+      "env": {
+        "ENV": "production",
+        "PORT": "8080"
+      },
+      "ports": [
+        {
+          "id": "api",
+          "port": 8080,
+          "type": "HTTP"
+        }
+      ]
+    }
+  ]
+}

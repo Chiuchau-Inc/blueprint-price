@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "name": "blueprint-price-client",
+  "builds": [
+    {
+      "src": "blueprint-price-client/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/blueprint-price-client/build/static/$1"
+    },
+    {
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|ico|svg))",
+      "dest": "/blueprint-price-client/build/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/blueprint-price-client/build/index.html"
+    }
+  ],
+  "env": {
+    "REACT_APP_API_BASE_URL": "@api-base-url",
+    "REACT_APP_GEMINI_API_KEY": "@gemini-api-key"
+  },
+  "build": {
+    "env": {
+      "REACT_APP_API_BASE_URL": "@api-base-url",
+      "REACT_APP_GEMINI_API_KEY": "@gemini-api-key"
+    }
+  }
+}
