@@ -17,8 +17,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application files
 COPY . .
 
-# Copy model files from parent directory
-COPY ../models/ ./models/
+# Model files are already included in the COPY . . step above
+# No additional copy needed as models/ is now in the API directory
 
 # Set environment variables
 ENV ENV=production

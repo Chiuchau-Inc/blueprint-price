@@ -23,7 +23,7 @@ app = Flask(__name__)
 CORS(app)
 
 # 載入模型
-model = load_model("../models/final_model_with_pipeline")
+model = load_model("models/final_model_with_pipeline")
 logger.info("模型載入成功！")
 
 def safe_divide(a, b, fill_value=0):
