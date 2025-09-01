@@ -17,9 +17,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application files
 COPY . .
 
-# Ensure models directory exists and copy model files
-RUN mkdir -p models
-COPY ../models/* ./models/ 2>/dev/null || true
+# Copy model files from parent directory
+COPY ../models/ ./models/
 
 # Set environment variables
 ENV ENV=production
