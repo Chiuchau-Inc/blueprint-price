@@ -63,9 +63,20 @@ The React client calls the Flask API at `/predict` endpoint. The API loads a PyC
 - Supports PDF/image processing with pdfjs-dist
 
 ### Environment Configuration
-- **API**: Uses `ENV` variable for production/development modes
-- **Client**: Requires `REACT_APP_GEMINI_API_KEY` for AI scanning features
-- **Ports**: API defaults to 8081, configurable via `PORT` environment variable
+
+**API Service Environment Variables:**
+- `ENV`: Set to `production` for production mode, `development` for dev mode
+- `PORT`: Server port (default: 8081)
+
+**Client Service Environment Variables:**
+- `REACT_APP_API_BASE_URL`: API server URL (e.g., `http://127.0.0.1:8081` for development, `https://your-api-domain.zeabur.app` for production)
+- `REACT_APP_GEMINI_API_KEY`: Google Gemini API key for AI document scanning features
+- `NODE_ENV`: Build environment (automatically set by build tools)
+
+**Setting up Environment Variables:**
+1. Copy `.env.example` to `.env.local` in the client directory
+2. Fill in your API URL and Gemini API key
+3. For Vercel deployment, set environment variables in the Vercel dashboard
 
 ## Project Structure Notes
 

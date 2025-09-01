@@ -87,10 +87,14 @@ Thumbs.db
 logs
 *.log
 
-# Database files
+# Database files (commented out to include procurement_data.db)
+# *.db
+# *.sqlite
+# *.sqlite3
+
+# Exclude specific database files but allow procurement_data.db
 *.db
-*.sqlite
-*.sqlite3
+!blueprint-price-api/procurement_data.db
 
 # Jupyter Notebook
 .ipynb_checkpoints
