@@ -1,7 +1,18 @@
 // Vercel Serverless Function to check IP access
 export default function handler(req, res) {
   // 允許的 IP 地址
-  const ALLOWED_IPS = ['211.21.66.134'];
+  const ALLOWED_IPS = [
+    '211.21.66.130',
+    '211.21.66.131', 
+    '211.21.66.132',
+    '211.21.66.133',
+    '211.21.66.134',
+    '211.21.66.135',
+    '211.21.66.136',
+    '211.21.66.137',
+    '211.21.66.138',
+    '211.21.66.139'
+  ];
   
   // 獲取客戶端真實 IP
   const forwardedFor = req.headers['x-forwarded-for'];
